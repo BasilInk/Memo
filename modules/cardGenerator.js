@@ -15,4 +15,3 @@ const cardGenerator = (array, enterSection) => {
 
 export default cardGenerator;
 
-

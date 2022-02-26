@@ -36,10 +36,12 @@ body {
 }
 
 .card:active {
-    transform:scale(97%);
-
+    transform:scale(90%);
 }
 
+.toggleCard {
+    transform: rotateY(180deg);
+}
 
 .back, .face {
     width: 100%;
