@@ -1,4 +1,5 @@
-const cardGenerator = (array, enterSection) => {
+const cardGenerator = (array, enterInSection, funcAction) => {
+
     array.forEach((item) => {
         const card = document.createElement(`div`);
         const face = document.createElement(`img`);
@@ -6,12 +7,18 @@ const cardGenerator = (array, enterSection) => {
         card.classList = "card";
         face.classList = "face";
         back.classList = "back";
-        enterSection.appendChild(card);;
+        enterInSection.appendChild(card);;
         card.appendChild(face);
         card.appendChild(back);
         face.src = item.imgSrc;
+        card.setAttribute(`name`, item.name);
+
+        card.addEventListener(`click`, (elem) => {
+            card.classList.toggle(`toggleCard`);
+            funcAction (elem);
+        })
     })
+
 };
 
 export default cardGenerator;
-

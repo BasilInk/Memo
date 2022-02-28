@@ -1,33 +1,12 @@
-import getData from "./modules/getData.js";
+import getCardsData from "./modules/getCardsData.js";
 import randomize from "./modules/randomize.js";
 import cardGenerator from "./modules/cardGenerator.js";
+import checkCards from "./modules/checkLogic.js"
 
-const section = document.querySelector(`section`);
+const section = document.getElementsByClassName(`container`);
 
-const cardData = getData();
+const cardsData = getCardsData();
 
-randomize(cardData);
+randomize(cardsData);
 
-cardGenerator(cardData, section);
-
-const card = document.querySelectorAll(`.card`);
-
-card.forEach((card) => {
-    card.addEventListener(`click`, () => {
-        card.classList.toggle(`toggleCard`)
-    })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+cardGenerator(cardsData, section[0], checkCards);

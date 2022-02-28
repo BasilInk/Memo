@@ -36,7 +36,7 @@ body {
 }
 
 .card:active {
-    transform:scale(90%);
+    transform:scale(95%);
 }
 
 .toggleCard {
@@ -49,6 +49,7 @@ body {
     object-fit: contain;
     background-color: rgb(255, 196, 0);
     border-radius: 8px;
+    pointer-events: none;
 }
 
 .back {

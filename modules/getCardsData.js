@@ -1,4 +1,4 @@
-const getData = () => [
+const getCardsData = () => [
     {imgSrc: "./img/pok1.png", name: "pok1"},
     {imgSrc: "./img/pok2.png", name: "pok2"},
     {imgSrc: "./img/pok3.png", name: "pok3"},
@@ -33,4 +33,4 @@ const getData = () => [
     {imgSrc: "./img/pok16.png", name: "pok16"},
 ];
 
-export default getData;
+export default getCardsData;
