@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    position: relative;
 }
 
 body {
@@ -62,4 +62,24 @@ body {
     top: 0;
     left: 0;
     backface-visibility: hidden;
+}
+
+.modalWindow {
+    background-color: black;
+    opacity: 80%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 64px;
+    color: rgb(255, 196, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalWindowChild {
+    text-align: center;
 }

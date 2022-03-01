@@ -1,3 +1,11 @@
+const modalWindow = document.createElement(`section`);
+modalWindow.classList.add(`modalWindow`);
+const modalWindowChild = document.createElement(`div`);
+modalWindow.appendChild(modalWindowChild);
+modalWindowChild.classList.add(`modalWindowChild`);
+modalWindowChild.textContent = `You WIN for 32 clicks`;
+
+
 const checkCards = (elem) => {
 
     const clickedCard = elem.target;
@@ -30,11 +38,11 @@ const checkCards = (elem) => {
             setTimeout (() => card.classList.remove(`onlyTwo`), 1000);
             setTimeout (() => card.style.pointerEvents =`all`, 1000);
         })
-    }
+    };
 
-    if (allCheckedCards.length === 32) {
-        setTimeout (() => alert (`finish`), 2000)
-    }
+    if (allCheckedCards.length === 1) {
+        setTimeout (() => document.body.append(modalWindow), 2000)
+    };
 
 };
 
