@@ -3,16 +3,16 @@ const checkCards = (elem) => {
     const clickedCard = elem.target;
     clickedCard.classList.add(`flipped`);
     clickedCard.classList.add(`onlyTwo`);
-    const allCards = document.querySelectorAll(`.card`);
-    const flippedCards = document.querySelectorAll(`.flipped`);
-    const oneTwo = document.querySelectorAll(`.onlyTwo`)
+    const allCards = [...document.getElementsByClassName(`card`)];
+    const flippedCards = [...document.getElementsByClassName(`flipped`)];
+    const onlyTwo = [...document.getElementsByClassName(`onlyTwo`)];
+    const allCheckedCards = [...document.getElementsByClassName(`toggleCard`)];
 
     if (flippedCards.length === 2) {
 
         if (flippedCards[0].getAttribute(`name`) === flippedCards[1].getAttribute(`name`)) {
             flippedCards.forEach((card) => {
                 card.classList.remove(`flipped`);
-                card.style.pointerEvents =`none`;
                 setTimeout (() => card.style.visibility =`hidden`, 1500);
             })
         } else {
@@ -22,14 +22,18 @@ const checkCards = (elem) => {
             });
         }
         
-    }
+    };
 
-    if(oneTwo.length > 1) {
+    if (onlyTwo.length > 1) {
         allCards.forEach((card) => {
             card.style.pointerEvents =`none`;
             setTimeout (() => card.classList.remove(`onlyTwo`), 1000);
             setTimeout (() => card.style.pointerEvents =`all`, 1000);
         })
+    }
+
+    if (allCheckedCards.length === 32) {
+        setTimeout (() => alert (`finish`), 2000)
     }
 
 };

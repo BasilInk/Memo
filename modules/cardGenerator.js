@@ -1,4 +1,4 @@
-const cardGenerator = (array, enterInSection, funcAction) => {
+const cardGenerator = (array, enterInSection, funcLogic) => {
 
     array.forEach((item) => {
         const card = document.createElement(`div`);
@@ -15,7 +15,7 @@ const cardGenerator = (array, enterInSection, funcAction) => {
 
         card.addEventListener(`click`, (elem) => {
             card.classList.toggle(`toggleCard`);
-            funcAction (elem);
+            funcLogic (elem);
         })
     })
 
