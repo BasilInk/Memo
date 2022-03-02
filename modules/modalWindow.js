@@ -24,6 +24,7 @@ function createModalWindow (count = 0) {
     btn.addEventListener(`click`, () => {
         location.reload()
     })
+    
 };
 
 export default createModalWindow;

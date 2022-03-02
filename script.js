@@ -29,6 +29,7 @@ const checkCards = (elem) => {
         if (flippedCards[0].getAttribute(`name`) === flippedCards[1].getAttribute(`name`)) {
             flippedCards.forEach((card) => {
                 card.classList.remove(`flipped`);
+                setTimeout (() => playSoundPica(), 700);
                 setTimeout (() => card.style.visibility =`hidden`, 1500);
             })
         } else {
@@ -58,8 +59,21 @@ cardGenerator(cardsData, container[0], checkCards);
 
 const allCards = [...document.getElementsByClassName(`card`)];
 
+const playSound = new Audio (`./audio/click.mp3`);
+
+const playSoundClick = function () {
+    playSound.play();
+};
+
+const playSound2 = new Audio (`./audio/pikachu.mp3`);
+
+const playSoundPica = function () {
+    playSound2.play();
+};
+
 allCards.forEach((card) => {
     card.addEventListener(`click`, (click) => {
+        playSoundClick();
         counter++;
         click = counter;
     })

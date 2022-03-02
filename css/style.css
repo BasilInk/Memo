@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    font-family: 'Lemonada', cursive;
 }
 
 body {
@@ -87,25 +88,30 @@ body {
     align-items: center;
     flex-direction: column;
     opacity: 80%;
+    margin: 8px;
+    width: auto;
 }
 
 .modalWindowButton {
-    max-width: 250px;
-    max-height: 50px;
+    width: 230px;
+    height: 65px;
     padding: 10px;
     margin-top: 40px;
     border-radius: 8px;
     box-shadow:rgb(32, 32, 32) 0 5px 15px;
     font-size: 22px;
     font-weight: 700;
-    background-color: rgb(255, 196, 0);
+    text-align: center;
+    background: linear-gradient(to left, #f7ff00, #db36a4, #f7ff00);
+    background-size: 200%;
     border: none;
     outline: none;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
 .modalWindowButton:hover {
     transform: scale(115%);
+    background-position: right;
 }
 
 .modalWindowButton:active {
