@@ -82,4 +82,32 @@ body {
 
 .modalWindowChild {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 80%;
+}
+
+.modalWindowButton {
+    max-width: 250px;
+    max-height: 50px;
+    padding: 10px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow:rgb(32, 32, 32) 0 5px 15px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: rgb(255, 196, 0);
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+}
+
+.modalWindowButton:hover {
+    transform: scale(115%);
+}
+
+.modalWindowButton:active {
+    transform: scale(100%);
 }
